@@ -7,9 +7,10 @@ import { Todo } from './interfaces'
   template: `
     <header>
       <ng-content select='.listheader'></ng-content>
+      <input type="color" [(ngModel)]="color">
     </header>
     <ul>
-      <li *ngFor="let todo of todos"> 
+      <li *ngFor="let todo of todos" highlight [highlightColor]='color'> 
         <todo-item [todo]="todo" (completed)="onCompleted($event)"></todo-item>
       </li>
     </ul>
@@ -21,10 +22,12 @@ import { Todo } from './interfaces'
 })
 export class TodoListComponent implements AfterViewInit {
 
+  color: string= "#FF2222"
+  
   @ViewChildren(TodoItemComponent) viewItems:QueryList<TodoListComponent>
 
   @Input('data')
-  todos:Todo[] = [ ]
+  todos:Todo[] = []
 
   add(todo:Todo) {
     this.todos.push(todo)

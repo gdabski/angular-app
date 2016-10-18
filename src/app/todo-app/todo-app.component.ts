@@ -12,7 +12,7 @@ import { Todo } from './interfaces';
       <div class="listheader"><b>Todo items:</b></div>
       <div class="listfooter">Zakończonych zadań: {{completedTodos}}.</div>
     </todo-list>
-    <button (click)=archiveCompleted()>Archiwizuj</button>
+    <button *unless="completedTodos" (click)=archiveCompleted()>Archiwizuj</button>
     <todo-form (created)="add($event) "></todo-form>
   </div>
   <todo-list [data]="archived" *ngIf="shown === archived">

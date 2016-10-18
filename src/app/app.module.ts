@@ -8,6 +8,8 @@ import { TodoAppComponent } from './todo-app/todo-app.component';
 import { TodoListComponent } from './todo-app/todo-list.component';
 import { TodoItemComponent } from './todo-app/todo-item.component';
 import { TodoFormComponent } from './todo-app/todo-form.component';
+import { UnlessDirective } from './unless.directive';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { TodoFormComponent } from './todo-app/todo-form.component';
     TodoAppComponent,
     TodoListComponent,
     TodoItemComponent,
-    TodoFormComponent
+    TodoFormComponent,
+    UnlessDirective,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
