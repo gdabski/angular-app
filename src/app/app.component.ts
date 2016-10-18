@@ -3,8 +3,11 @@ import { Component, ViewEncapsulation } from '@angular/core';
 @Component({
   selector: 'app-root',
   //templateUrl: './app.component.html'
-  template: `<h1>  Witam! {{title}} </h1>
-    <p> App Component </p>
+  template: `
+    <div class="container">
+      <h3>Angular Warsztat</h3>
+    <div class="columns">
+    <div class="column">
     <todo-app></todo-app>
   `,
   styles: ['h1{ color: red}']

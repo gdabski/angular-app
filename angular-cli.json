@@ -15,6 +15,7 @@
       "prefix": "",
       "mobile": false,
       "styles": [
+        "../node_modules/bulma/css/bulma.css",
         "styles.css"
       ],
       "scripts": [],

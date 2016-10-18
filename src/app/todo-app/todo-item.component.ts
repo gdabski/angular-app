@@ -14,7 +14,7 @@ import { Todo } from './interfaces'
 export class TodoItemComponent implements OnInit {
 
   @Input('todo') set setData(data:Todo){
-    this.data = Object.assign({}, data);
+    this.data = data;
   }
   
   data:Todo;

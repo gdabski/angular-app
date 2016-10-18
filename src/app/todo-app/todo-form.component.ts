@@ -22,7 +22,9 @@ export class TodoFormComponent implements OnInit {
   }
 
   addTodo(name:string){
-    this.events.emit(this.todo)
+    let copy = Object.assign({}, this.todo);
+    this.todo.name = ""
+    this.events.emit(copy)
   }
 
   ngOnInit() {
