@@ -15,7 +15,7 @@ export class AlbumSearchComponent {
 
     constructor(private musicService: MusicService) {
         this.searchForm = new FormGroup({
-            "query": new FormControl(musicService.defaultQuery, [
+            "query": new FormControl(musicService.queryCache, [
                 Validators.required,
                 Validators.minLength(3),
             ])
@@ -31,7 +31,7 @@ export class AlbumSearchComponent {
     }
 
     onSearch() {
-        
+
     }
 
 }

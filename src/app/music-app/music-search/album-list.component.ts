@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Album, Image } from './interfaces';
+import {Observable } from 'rxjs'
 
 @Component({
   selector: 'album-list',
@@ -8,9 +9,6 @@ import { Album, Image } from './interfaces';
 })
 export class AlbumListComponent {
 
-    @Input() albums: Album[]
-
-    constructor() {
-    }
+    @Input() albums: Observable<Album[]>
 
 }
