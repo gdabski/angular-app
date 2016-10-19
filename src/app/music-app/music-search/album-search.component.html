@@ -1,3 +1,6 @@
-<p>
-  album-search works!
-</p>
+<!-- <input type="text" [(ngModel)]="query" > -->
+
+<form [formGroup]="searchForm" class="control has-addons">
+    <input formControlName="query" class="input is-expanded">
+    <input type="button" value="Search" class="button" (click)="onSearch()" >
+</form>
