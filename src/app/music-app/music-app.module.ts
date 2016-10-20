@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, PlatformLocation } from '@angular/common';
 import { MusicSearchComponent } from './music-search/music-search.component';
 import { AlbumSearchComponent } from './music-search/album-search.component';
 import { AlbumListComponent } from './music-search/album-list.component';
 import { AlbumCardComponent } from './music-search/album-card.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MusicService } from './music.service';
 import { BookmarksService } from './bookmarks.service';
 import { BookmarkComponent } from './bookmarks/bookmark.component';
 import { BookmarksListComponent } from './bookmarks/bookmarks-list.component';
+import { ShortenPipe } from './shorten.pipe';
 
 @NgModule({
     imports: [
@@ -25,7 +26,8 @@ import { BookmarksListComponent } from './bookmarks/bookmarks-list.component';
         AlbumListComponent,
         AlbumCardComponent,
         BookmarkComponent,
-        BookmarksListComponent
+        BookmarksListComponent,
+        ShortenPipe
     ],
     providers: [
         MusicService,

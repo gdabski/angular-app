@@ -1,5 +1,6 @@
+<input type="range" min="1" max="6" [(ngModel)]="cardWidth">
 <ul class="columns is-multiline">
-    <li *ngFor="let album of albums | async" class="column is-4"
+    <li *ngFor="let album of albums | async" [class]="'column is-' + cardWidth"
         (click)="bookmarkAlbum(album)">
         <album-card [album]="album"></album-card>
     </li>

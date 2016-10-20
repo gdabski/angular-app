@@ -1,4 +1,4 @@
 <div>
-    {{bookmark.name}}
-    <div class="delete" (click)="deleteBookmark()">
+    <div class="delete" (click)="deleteBookmark()"></div>
+    {{bookmark.name | shorten:30}}
 </div>
