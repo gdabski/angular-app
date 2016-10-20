@@ -16,11 +16,7 @@ export class AlbumListComponent {
     constructor(private bookmarksService: BookmarksService) {}
 
     bookmarkAlbum(album: Album): void {
-        this.bookmarksService.addBookmark({
-            id: NaN,
-            name: album.name,
-            albumId: album.id
-        })
+        this.bookmarksService.addBookmark(album)
     }
 
 }
