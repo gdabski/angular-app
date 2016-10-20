@@ -71,4 +71,8 @@ export class BookmarksService {
         this.bookmarks$.next(this.bookmarks)
     }
 
+    getBookmark(id: number): Observable<Bookmark> {
+        return this.http.get(URL + id).map(response => response.json());
+    }
+
 }

@@ -10,12 +10,16 @@ import { BookmarksService } from './bookmarks.service';
 import { BookmarkComponent } from './bookmarks/bookmark.component';
 import { BookmarksListComponent } from './bookmarks/bookmarks-list.component';
 import { ShortenPipe } from './shorten.pipe';
+import { RoutingModule } from './music.routing';
+import { BookmarksComponent } from './bookmarks/bookmarks.component';
+import { BookmarkDetailsComponent } from './bookmarks/bookmark-details.component';
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        RoutingModule
     ],
     exports: [
         MusicSearchComponent
@@ -27,7 +31,9 @@ import { ShortenPipe } from './shorten.pipe';
         AlbumCardComponent,
         BookmarkComponent,
         BookmarksListComponent,
-        ShortenPipe
+        ShortenPipe,
+        BookmarksComponent,
+        BookmarkDetailsComponent
     ],
     providers: [
         MusicService,

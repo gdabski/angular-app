@@ -3,16 +3,19 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MusicAppModule } from './music-app/music-app.module';
+import { RoutingModule } from './routing';
 
 import { AppComponent } from './app.component';
 import { TodoAppComponent } from './todo-app/todo-app.component';
 import { TodoListComponent } from './todo-app/todo-list.component';
 import { TodoItemComponent } from './todo-app/todo-item.component';
 import { TodoFormComponent } from './todo-app/todo-form.component';
+import { MusicSearchComponent } from './music-app/music-search/music-search.component';
 import { UnlessDirective } from './unless.directive';
 import { HighlightDirective } from './highlight.directive';
 import { LifeCycleComponent } from './life-cycle.component';
-import { PlatformLocation } from '@angular/common';
+
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -23,13 +26,15 @@ import { PlatformLocation } from '@angular/common';
     TodoFormComponent,
     UnlessDirective,
     HighlightDirective,
-    LifeCycleComponent
+    LifeCycleComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    MusicAppModule
+    MusicAppModule,
+    RoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
