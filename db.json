@@ -1,0 +1,24 @@
+{
+  "bookmarks": [
+    {
+      "name": "The Dark Side of the Moon",
+      "albumId": "4LH4d3cOWNNsVw41Gqt2kv",
+      "id": 2
+    },
+    {
+      "name": "Animals",
+      "albumId": "3b4E89rxzZQ9zkhgKpj8N4",
+      "id": 3
+    },
+    {
+      "name": "Wish You Were Here",
+      "albumId": "0bCAjiUamIFqKJsekOYuRw",
+      "id": 4
+    },
+    {
+      "name": "Gentle Giant",
+      "albumId": "74Ocu3SLMQ1SD9uGAR8dVe",
+      "id": 5
+    }
+  ]
+}

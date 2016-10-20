@@ -9,8 +9,8 @@ export class MusicService {
     private searches$: Subject<string> = new Subject<string>();
     private albums$: Subject<Album[]> = new Subject<Album[]>();
 
-    queryCache: string = "Pink Floyd"
-    albumsCache: Album[] = []
+    queryCache: string
+    albumsCache: Album[]
 
     constructor(private http: Http) {
         this.albumsCache = JSON.parse(localStorage.getItem('albums') || '[]')
@@ -18,6 +18,7 @@ export class MusicService {
 
         this.searches$
         .map(query => {
+            console.log('setting localStorage ', query)
             localStorage.setItem("query", JSON.stringify(query))
             return `https://api.spotify.com/v1/search?q=${query}&type=album`
         })
@@ -35,6 +36,7 @@ export class MusicService {
     }
 
     search(query: string) {
+        this.queryCache = query
         this.searches$.next(query)
     }
 
