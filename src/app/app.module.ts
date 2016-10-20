@@ -23,7 +23,7 @@ import { PlatformLocation } from '@angular/common';
     TodoFormComponent,
     UnlessDirective,
     HighlightDirective,
-    LifeCycleComponent
+    LifeCycleComponent,
   ],
   imports: [
     BrowserModule,

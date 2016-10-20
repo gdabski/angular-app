@@ -1,5 +1,3 @@
-import { PlatformLocation } from '@angular/common';
-
 export interface Album {
     id: string,
     name: string,

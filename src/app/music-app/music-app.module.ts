@@ -6,6 +6,9 @@ import { AlbumListComponent } from './music-search/album-list.component';
 import { AlbumCardComponent } from './music-search/album-card.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { MusicService } from './music.service';
+import { BookmarksService } from './bookmarks.service';
+import { BookmarkComponent } from './bookmarks/bookmark.component';
+import { BookmarksListComponent } from './bookmarks/bookmarks-list.component';
 
 @NgModule({
     imports: [
@@ -20,10 +23,13 @@ import { MusicService } from './music.service';
         MusicSearchComponent,
         AlbumSearchComponent,
         AlbumListComponent,
-        AlbumCardComponent
+        AlbumCardComponent,
+        BookmarkComponent,
+        BookmarksListComponent
     ],
     providers: [
-        MusicService
+        MusicService,
+        BookmarksService
     ]
 })
 export class MusicAppModule { }

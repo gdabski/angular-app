@@ -1,5 +1,6 @@
 <ul class="columns is-multiline">
-    <li *ngFor="let album of albums | async" class="column is-4">
+    <li *ngFor="let album of albums | async" class="column is-4"
+        (click)="bookmarkAlbum(album)">
         <album-card [album]="album"></album-card>
     </li>
 <ul>

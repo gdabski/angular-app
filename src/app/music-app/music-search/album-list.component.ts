@@ -1,6 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Album, Image } from './interfaces';
-import {Observable } from 'rxjs'
+import { Observable } from 'rxjs';
+import { BookmarksService } from '../bookmarks.service';
+import { PlatformLocation } from '@angular/common';
 
 @Component({
   selector: 'album-list',
@@ -10,5 +12,15 @@ import {Observable } from 'rxjs'
 export class AlbumListComponent {
 
     @Input() albums: Observable<Album[]>
+
+    constructor(private bookmarksService: BookmarksService) {}
+
+    bookmarkAlbum(album: Album): void {
+        this.bookmarksService.addBookmark({
+            id: NaN,
+            name: album.name,
+            albumId: album.id
+        })
+    }
 
 }

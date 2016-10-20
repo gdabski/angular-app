@@ -30,7 +30,6 @@ export class MusicService {
         .subscribe(albums => {
             localStorage.setItem("albums", JSON.stringify(albums))
             this.albumsCache = albums
-            console.log('newItems', albums)
             this.albums$.next(albums)
         })
     }
@@ -41,7 +40,6 @@ export class MusicService {
 
     getAlbums(): Observable<Album[]> {
         return Observable.from(this.albums$)
-            .do(a => console.log(a))
             .startWith(this.albumsCache)
     }
 

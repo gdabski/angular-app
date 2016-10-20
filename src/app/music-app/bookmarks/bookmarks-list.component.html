@@ -1,0 +1,7 @@
+<h3>Bookmarks</h3>
+<ul>
+    <li *ngFor="let bookmark of bookmarks$ | async"
+        class="column is-fullwidth card">
+        <bookmark [bookmark]="bookmark"></bookmark>
+    </li>
+</ul>
