@@ -1,2 +1,21 @@
 <h3 class="title is-3">{{bookmark?.name}}</h3>
-<p>{{bookmark?.albumId}}</p>
+<form (ngSubmit)="onSave()" *ngIf="bookmark" #bookmarkForm="ngForm">
+    <div class="control has-addons">
+        <input name="comment" placeholder="Your comment..." class="input is-expanded"
+                [(ngModel)]="bookmark.comment" required minlength="3" maxlength="50"
+                starts-with-letter>
+        <select name="rating" [(ngModel)]="bookmark.rating" class="input">
+            <option [selected]="!bookmark.rating" [value]="bookmark.cokolwiek">No stars</option>
+            <option *ngFor="let r of [1,2,3,4,5]" [value]="r">Rating: {{r}}</option>
+        </select>
+        <input type="submit" value="Save">
+    </div>
+    <div *ngIf="bookmarkForm.controls?.comment?.errors && bookmarkForm.controls?.comment?.touched">
+        <span *ngIf="bookmarkForm.controls?.comment?.errors.required">
+                Please provide comment.</span>
+        <span *ngIf="bookmarkForm.controls?.comment?.errors.minlength">
+                Comment must be at least {{bookmarkForm.controls?.comment?.errors.minlength.requiredLength}} chars.</span>
+        <span *ngIf="bookmarkForm.controls?.comment?.errors.startsWithLetter">
+                Comment must start with a letter.</span>
+    </div>
+</form>

@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { PlatformLocation } from '@angular/common';
 import { MusicService } from '../music.service';
+import { startsWithLetter, noBatman } from './validators';
 
 @Component({
     selector: 'album-search',
@@ -18,6 +19,9 @@ export class AlbumSearchComponent {
             "query": new FormControl(musicService.queryCache, [
                 Validators.required,
                 Validators.minLength(3),
+                startsWithLetter
+            ], [
+                noBatman
             ])
         })
 
@@ -28,10 +32,13 @@ export class AlbumSearchComponent {
             .subscribe(value => {
                 this.musicService.search(value)
             })
+
+        this.searchForm.get('query').statusChanges.subscribe(status => {
+            console.log(status, this.searchForm.get('query').pending,
+                    this.searchForm.get('query').errors)
+        })
     }
 
-    onSearch() {
-
-    }
+    onSearch() { }
 
 }

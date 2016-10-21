@@ -13,6 +13,7 @@ import { ShortenPipe } from './shorten.pipe';
 import { RoutingModule } from './music.routing';
 import { BookmarksComponent } from './bookmarks/bookmarks.component';
 import { BookmarkDetailsComponent } from './bookmarks/bookmark-details.component';
+import { StartsWithLetterDirective } from './starts-with-letter.directive';
 
 @NgModule({
     imports: [
@@ -33,7 +34,8 @@ import { BookmarkDetailsComponent } from './bookmarks/bookmark-details.component
         BookmarksListComponent,
         ShortenPipe,
         BookmarksComponent,
-        BookmarkDetailsComponent
+        BookmarkDetailsComponent,
+        StartsWithLetterDirective
     ],
     providers: [
         MusicService,

@@ -35,7 +35,7 @@ export class BookmarksService {
         })
     }
 
-    private saveBookmark(bookmark: NewBookmark): Observable<Bookmark> {
+    saveBookmark(bookmark: NewBookmark): Observable<Bookmark> {
         let options = new RequestOptions({
             headers: new Headers({
                 'ContentType': 'application/json',

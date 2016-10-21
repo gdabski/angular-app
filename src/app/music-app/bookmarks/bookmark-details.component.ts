@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute } from '@angular/router';
 import { BookmarksService } from '../bookmarks.service';
 import { Bookmark } from './interfaces';
+import { NgForm } from '@angular/forms';
 
 @Component({
     selector: 'bookmark-details',
@@ -22,6 +23,13 @@ export class BookmarkDetailsComponent {
                 })
             }
         })
+    }
+
+    onSave(): void {
+        this.bookmarksService.saveBookmark(this.bookmark)
+            .subscribe(bookmark => {
+                this.bookmark = bookmark
+            })
     }
 
 }

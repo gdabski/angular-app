@@ -6,4 +6,6 @@ export interface NewBookmark {
 
 export interface Bookmark extends NewBookmark {
     id: number
+    comment?: string
+    rating?: number
 }

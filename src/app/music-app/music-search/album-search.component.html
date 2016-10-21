@@ -1,6 +1,20 @@
 <!-- <input type="text" [(ngModel)]="query" > -->
 
-<form [formGroup]="searchForm" class="control has-addons">
-    <input formControlName="query" class="input is-expanded">
-    <input type="button" value="Search" class="button" (click)="onSearch()" >
+<form [formGroup]="searchForm">
+    <div class="control has-addons">
+        <input formControlName="query" class="input is-expanded">
+        <input type="button" value="Search" class="button" (click)="onSearch()" >
+    </div>
+    <div *ngIf="searchForm.controls.query?.pending">Validating...</div>
+    <div *ngIf="searchForm.controls.query?.errors && searchForm.controls.query?.touched">
+        <span *ngIf="searchForm.controls.query?.errors.required">
+            Please provide artist name.
+        </span>
+        <span *ngIf="searchForm.controls.query?.errors.startsWithLetter">
+            Query must start with letter.
+        </span>
+        <span *ngIf="searchForm.controls.query?.errors.noBatman">
+            Batman not allowed!
+        </span>
+    </div>
 </form>
