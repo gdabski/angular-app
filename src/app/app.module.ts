@@ -16,6 +16,7 @@ import { HighlightDirective } from './highlight.directive';
 import { LifeCycleComponent } from './life-cycle.component';
 
 import { NavComponent } from './nav/nav.component';
+import { TestingComponent } from './testing/testing.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { NavComponent } from './nav/nav.component';
     UnlessDirective,
     HighlightDirective,
     LifeCycleComponent,
-    NavComponent
+    NavComponent,
+    TestingComponent
   ],
   imports: [
     BrowserModule,

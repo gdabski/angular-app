@@ -5,17 +5,21 @@
       "albumId": "4LH4d3cOWNNsVw41Gqt2kv",
       "id": 2,
       "rating": 5,
-      "comment": "My comment."
+      "comment": "Twentieth century's most iconic album cover."
     },
     {
       "name": "Animals",
       "albumId": "3b4E89rxzZQ9zkhgKpj8N4",
-      "id": 3
+      "id": 3,
+      "rating": "undefined",
+      "comment": "Did they tell you the name of the game?"
     },
     {
       "name": "Wish You Were Here",
       "albumId": "0bCAjiUamIFqKJsekOYuRw",
-      "id": 4
+      "id": 4,
+      "comment": "Walk on part in a war.",
+      "rating": 5
     },
     {
       "name": "Gentle Giant",
@@ -28,8 +32,8 @@
       "name": "Weather Report",
       "albumId": "6MBWaIBPJG7iAqJGIQvMkL",
       "id": 6,
-      "comment": "Komentarz.",
-      "rating": 3
+      "comment": "Jazz-rock fusion.",
+      "rating": 4
     }
   ]
 }

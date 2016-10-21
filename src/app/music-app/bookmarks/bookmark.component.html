@@ -1,4 +1,4 @@
 <div>
     <div class="delete" (click)="deleteBookmark()"></div>
-    <span [routerLink]="['/bookmarks', bookmark.id]">{{bookmark.name | shorten:30}}</span>
+    <span [routerLink]="['/bookmarks', bookmark.id]">{{bookmark.name | shorten:20}}</span>
 </div>
