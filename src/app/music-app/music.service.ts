@@ -17,12 +17,12 @@ export class MusicService {
         this.queryCache = JSON.parse(localStorage.getItem('query') || '""')
 
         this.searches$
-        .map(query => {
+        .map((query: string) => {
             console.log('setting localStorage ', query)
             localStorage.setItem("query", JSON.stringify(query))
             return `https://api.spotify.com/v1/search?q=${query}&type=album`
         })
-        .flatMap(url => {
+        .flatMap((url: string) => {
             return this.http.get(url)
         })
         .map((response: Response) => {
