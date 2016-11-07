@@ -1,5 +1,3 @@
-/* tslint:disable:no-unused-variable */
-
 import { TestBed, async } from '@angular/core/testing';
 import { TestingComponent } from './testing.component';
 import { BaseRequestOptions, ConnectionBackend, Http } from '@angular/http';
